@@ -1,6 +1,18 @@
 #:kivy 2.3.0
 
-BoxLayoutExample:
+AchorLayoutExample:
+
+<AchorLayoutExample>:
+    # right, left, center
+    anchor_x: "center"
+    # bottom, top, center
+    anchor_y: "top"
+    BoxLayout:
+        size_hint: .2, .2
+        Button:
+            text: "A"
+        Button:
+            text: "B"
 
 <BoxLayoutExample>:
     orientation: 'horizontal'

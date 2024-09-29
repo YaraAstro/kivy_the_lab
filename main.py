@@ -1,7 +1,11 @@
 from kivy.uix.button import Button
+from kivy.uix.anchorlayout import AnchorLayout
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.widget import Widget
 from kivy.app import App 
+
+class AchorLayoutExample (AnchorLayout): 
+    pass
 
 class BoxLayoutExample (BoxLayout):
     pass
