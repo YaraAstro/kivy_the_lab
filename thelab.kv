@@ -6,8 +6,13 @@ BoxLayoutExample:
     orientation: 'vertical'
     Button:
         text: "A"
+        # size: "100dp", "50dp"
+        size_hint: .5, None 
+        height: "60dp"
+        pos_hint: {'center_x': .5}
     Button:
         text: "B"
+        size_hint: 1, 2 
     Label:
         text: "C"
 
