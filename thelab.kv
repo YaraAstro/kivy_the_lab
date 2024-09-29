@@ -1,6 +1,27 @@
 #:kivy 2.3.0
 
-AchorLayoutExample:
+GridLayoutExample:
+
+<GridLayoutExample@GridLayout>:
+    # cols: 3
+    rows: 2
+    Button:
+        text: "A"
+        size_hint: None, 1
+        width: "50dp"
+    BoxLayoutExample:
+    Button:
+        text: "C"
+    Button:
+        text: "D"
+        size_hint: None, 1
+        width: "50dp"
+    Button:
+        text: "E"
+    Button:
+        text: "F"
+    # Button:
+    #    text: "C"
 
 <AchorLayoutExample>:
     # right, left, center
