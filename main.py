@@ -169,6 +169,10 @@ class CanvasExample05 (Widget):
 class CanvasExample06 (Widget):
     pass
 
+# canvas example -7
+class FrenchFlag (BoxLayout):
+    pass
+
 
 
 TheLabApp().run()
