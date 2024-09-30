@@ -8,10 +8,13 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.widget import Widget
 from kivy.app import App 
 
+
+
 class WidgetExample (GridLayout):
     count = 1
     count_enabled = BooleanProperty(False) 
     my_text = StringProperty("1") 
+    text_input_str = StringProperty("Boo")
     # slider_value_text = StringProperty("Value")
     
     def on_button_click (self):
@@ -35,6 +38,9 @@ class WidgetExample (GridLayout):
     # def on_slider_value (self, widget):
     #     print("Slider : " + str(int(widget.value)))
     #     self.slider_value_text = str(int(widget.value))
+
+    def on_text_validate (self, widget):
+        self.text_input_str = widget.text
 
 
 

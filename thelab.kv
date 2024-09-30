@@ -1,29 +1,38 @@
 #:kivy 2.3.0
 
+
+
 WidgetExample:
+
+
 
 <WidgetExample>:
     cols: 3
+    
     ToggleButton:
         text: "OFF"
         on_press: root.on_toggle_button_state(self)
         size_hint: None, 1
         width: "100dp"
+    
     Button:
         text: "Count"
         on_press: root.on_button_click()
         disabled: not root.count_enabled
+    
     Label:
         text: root.my_text
         font_name: "fonts/Lcd.ttf"
         font_size: "75dp"
         color: 1, .5, 0, 1
+    
     Switch:
         id: my_switch
         on_active: root.on_switch_active(self)
         size_hint: None, 1
         width: "100dp"
         active: True
+    
     Slider:
         id: my_slider
         min: 0
@@ -32,6 +41,7 @@ WidgetExample:
         orientation: "vertical"
         # on_value: root.on_slider_value(self)
         disabled: not my_switch.active
+    
     BoxLayout:
         orientation: "vertical"
         Label:
@@ -39,6 +49,19 @@ WidgetExample:
         ProgressBar:
             max: 100
             value: my_slider.value
+    
+    TextInput:
+        id: my_text
+        size_hint: None, 1
+        width: "100dp"
+        text: "Boo"
+        multiline: False
+        on_text_validate: root.on_text_validate(self)
+
+    Label: 
+        text: "You Entered :" + root.text_input_str
+
+
 
 <PageLayoutExample@PageLayout>:
     MainWidget:
@@ -46,10 +69,14 @@ WidgetExample:
     AchorLayoutExample:
     GridLayoutExample:
 
+
+
 <ScrollViewExample@ScrollView>:
     StackLayoutExample:
         size_hint: 1, None
         height: self.minimum_height
+
+
 
 <StackLayoutExample>:
     # left-right & top-bottom -> lr-tb | right-left & top-bottom -> rl-tb
@@ -57,32 +84,44 @@ WidgetExample:
     # padding: ("20dp", "10dp", "30dp", "50dp")
     # spacing: "20dp", "10dp"
 
+
+
 <GridLayoutExample@GridLayout>:
     # cols: 3
     rows: 2
+    
     Button:
         text: "A"
         size_hint: None, 1
         width: "50dp"
+    
     BoxLayoutExample:
+    
     Button:
         text: "C"
+    
     Button:
         text: "D"
         size_hint: None, 1
         width: "50dp"
+    
     Button:
         text: "E"
+    
     Button:
         text: "F"
+    
     # Button:
     #    text: "C"
+
+
 
 <AchorLayoutExample>:
     # right, left, center
     anchor_x: "center"
     # bottom, top, center
     anchor_y: "top"
+    
     BoxLayout:
         size_hint: .2, .2
         Button:
@@ -90,26 +129,37 @@ WidgetExample:
         Button:
             text: "B"
 
+
+
 <BoxLayoutExample>:
     orientation: 'horizontal'
+    
     Button:
         text: "A"
         size_hint: 1, .5 
         pos_hint: {'center_y': .5}
+    
     BoxLayout:
         size_hint: 2, 1 
         orientation: 'vertical'
         spacing: "10dp"
+        
         Button:
             text: "B1" 
+        
         Button:
             text: "B2" 
+        
         Button:
             text: "B3" 
+        
         Button:
             text: "B4"
+    
     Label:
         text: "C"
+
+
 
 <MainWidget>:
     Button:
@@ -117,6 +167,7 @@ WidgetExample:
         size: "100dp", "80dp"
         pos: "100dp", "200dp"
         color: 0, 0, 1, 1
+    
     Label:
         text: "Yara"
         size: "100dp", "80dp"
