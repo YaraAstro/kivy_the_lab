@@ -9,10 +9,12 @@ from kivy.uix.widget import Widget
 from kivy.app import App 
 
 class WidgetExample (GridLayout):
-    my_text = StringProperty("YARA!") 
+    count = 1
+    my_text = StringProperty("1") 
     def on_button_click (self):
         print("Button Cliked")
-        self.my_text = "ASTRO"
+        self.my_text = str(self.count)
+        self.count += 1
 
 class StackLayoutExample (StackLayout): 
     def __init__(self, **kwargs):
