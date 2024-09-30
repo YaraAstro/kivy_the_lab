@@ -12,11 +12,14 @@ class WidgetExample (GridLayout):
     count = 1
     count_enabled = BooleanProperty(False) 
     my_text = StringProperty("1") 
+    # slider_value_text = StringProperty("Value")
+    
     def on_button_click (self):
         print("Button Cliked")
         if self.count_enabled:
             self.my_text = str(self.count)
             self.count += 1
+    
     def on_toggle_button_state (self, widget):
         print("Toggle State : " + widget.state)
         if widget.state == "normal":
@@ -25,10 +28,15 @@ class WidgetExample (GridLayout):
         else:
             widget.text = "ON"
             self.count_enabled = True
+    
     def on_switch_active (self, widget):
         print("Switch : " + str(widget.active))
-    def on_slider_value (self, widget):
-        print("Slider : " + str(int(widget.value)))
+    
+    # def on_slider_value (self, widget):
+    #     print("Slider : " + str(int(widget.value)))
+    #     self.slider_value_text = str(int(widget.value))
+
+
 
 class StackLayoutExample (StackLayout): 
     def __init__(self, **kwargs):
@@ -42,8 +50,12 @@ class StackLayoutExample (StackLayout):
 # class GridLayoutExample (GridLayout): 
 #     pass
 
+
+
 class AchorLayoutExample (AnchorLayout): 
     pass
+
+
 
 class BoxLayoutExample (BoxLayout):
     pass
@@ -60,10 +72,16 @@ class BoxLayoutExample (BoxLayout):
     #     self.add_widget(b2)
     #     self.add_widget(b3)
 
+
+
 class MainWidget (Widget):
     pass
 
+
+
 class TheLabApp (App):
     pass
+
+
 
 TheLabApp().run()

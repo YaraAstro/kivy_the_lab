@@ -23,10 +23,13 @@ WidgetExample:
         size_hint: None, 1
         width: "100dp"
     Slider:
+        id: my_slider
         min: 0
         max: 100
         value: 50
-        on_value: root.on_slider_value(self)
+        # on_value: root.on_slider_value(self)
+    Label:
+        text: str(int(my_slider.value))
 
 <PageLayoutExample@PageLayout>:
     MainWidget:
