@@ -1,8 +1,24 @@
 #:kivy 2.3.0
 
 
-CanvasExample02:
+CanvasExample03:
 
+
+<CanvasExample03>:
+    canvas:
+        Color: 
+            rgb: 1, .5, .15, .5
+        Line:
+            circle: (100, 100, 50) # center_x, center_y, radius
+            width: 1
+        Line:
+            ellipse: (500, 300, 100, 200) # center_x, center_y, radius
+            width: 2
+        Color: 
+            rgb: 0, 0, .75, .85
+        Line:
+            rectangle: (300, 100, 200, 150) # x, y, w, h
+            width: 2
 
 
 <CanvasExample02>:
