@@ -1,6 +1,14 @@
 #:kivy 2.3.0
 
-PageLayoutExample:
+WidgetExample:
+
+<WidgetExample>:
+    cols: 3
+    Button:
+        text: "Click here"
+        on_press: root.on_button_click()
+    Label:
+        text: root.my_text
 
 <PageLayoutExample@PageLayout>:
     MainWidget:
