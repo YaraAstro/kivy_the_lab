@@ -4,11 +4,17 @@ Kivy The Lab is an interactive application built using the Kivy framework. It se
 
 ## Table of Contents
 
+- [Tutorial](#tutorial)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
 - [Contributing](#contributing)
 - [License](#license)
+
+## Tutorial
+
+[![watch tutorial](https://i.ytimg.com/vi/l8Imtec4ReQ/hq720.jpg)](https://youtu.be/l8Imtec4ReQ)
+[Original Source Code](https://codewithjonathan.net/resourceskivy)
 
 ## Installation
 
