@@ -1,6 +1,8 @@
 from kivy.uix.button import Button
 from kivy.metrics import dp
 from kivy.properties import StringProperty, BooleanProperty
+from kivy.graphics.vertex_instructions import Line, Rectangle
+from kivy.graphics.context_instructions import Color
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.stacklayout import StackLayout
 from kivy.uix.anchorlayout import AnchorLayout
@@ -100,6 +102,18 @@ class CanvasExample02 (Widget):
 
 class CanvasExample03 (Widget):
     pass
+
+
+class CanvasExample04 (Widget):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        with self.canvas:
+            Line(points=(100, 100, 400, 500), width=2)
+            Color(0, 1, 0)
+            Line(circle=(400, 200, 80), width=2)
+            Color(1, .5, 0)
+            Line(rectangle=(250, 200, 100, 125), width=3)
+            Rectangle(pos=(200, 300), size=(100, 150))
 
 
 TheLabApp().run()
