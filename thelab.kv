@@ -1,8 +1,18 @@
 #:kivy 2.3.0
 
 
+CanvasExample01:
 
-ImageExample:
+#: set s dp(150)
+
+<CanvasExample01>:
+    canvas:
+        Rectangle:
+            pos: self.center_x-s/2, self.center_y-s/2
+            size: s, s
+        Ellipse:
+            pos: 100, 200
+            size: s, s/2
 
 
 <ImageExample@GridLayout>:
